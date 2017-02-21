@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-<script src="crystal.js"></script>
-	<meta charset="UTF-8">
-	<title>Crystal Collector Game</title>
-	<style type="text/css">
-		img {
-			width: 20%;
-		}
-		.numberToMatch {
-			border: 1px solid black;
-			width: 30%;
-			height: 100px;
-		}
-		.score {
-			border: 1px solid black;
-			width: 30%;
-			height: 100px;
-		}
-
-
-	</style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="crystal.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="crystalstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Crystal Collector Game</title>
 </head>
+
 <body>
-<h1> CrystalsCollector! </h1>
-
-<div class="instructions">
-<p> You will be given a random nuber at the start of the game. <br>There are four crystals below. By clicking on a crystal you will ad a specific amount of points to your total score.<br> You will win the game by matching your total score to the random number.<br> The value of each crystal is hidden from you until you click on it. <br>Each time when the game starts, the game will change the values of each crystal.</p>
-</div>
-<div class="numberToMatch">Test</div>
-<div class="scoreBoard">
-	<ul>
-		<li><p id="winlossmessage"></p></li>
-		<li>Wins:<p id="wins"></p></li>
-		<li>Losses:<p id="losses"></p></li>
-	</ul>
-</div>
-<div class="gemPics">
-	<img src="crystal1.png" alt="crystal1" class="pic1">
-	<img src="crystal2.png" alt="crystal2" class="pic2">
-	<img src="crystal3.png" alt="crystal3" class="pic3">
-	<img src="crystal4.png" alt="crystal4" class="pic4">
-</div>
-<div>
-	<h3>Your total score is:</h3>
-	<p class="score">Test</p>
-</div>
-
+    <div class="header"><h1> CrystalsCollector! </h1></div>
+    <div class="instructions">
+        <p> You will be given a random number at the start of the game under "number to match."
+            <br>
+            <br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+            <br>
+            <br>You will win the game by matching your total score to the random number.
+            <br>
+            <br> The value of each crystal is hidden from you until you click on it.
+            <br>
+            <br>Each time when the game starts, the game will change the values of each crystal.<br><br>
+            Be careful, if you go over the number to match, you lose that round!</p>
+    </div>
+    <div class="scoreBoard">
+		<h2>Number to match:</h2>
+        	<div class="numberToMatch"></div>
+    
+    <br><br>
+        <ul>
+            <li>
+                <p id="winlossmessage"></p>
+            </li>
+            <li>Wins:
+                <p id="wins"></p>
+            </li>
+            <li>Losses:
+                <p id="losses"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="gemPics">
+        <img src="crystal1.png" alt="crystal1" class="pic1">
+        <img src="crystal2.png" alt="crystal2" class="pic2"><br>
+        <img src="crystal3.png" alt="crystal3" class="pic3">
+        <img src="crystal4.png" alt="crystal4" class="pic4">
+    </div>
+    <div class="adding">
+        <h2>Your total score is:</h2>
+        <p class="score">0</p>
+    </div>
 </body>
+
 </html>
