@@ -120,5 +120,9 @@ font-family: 'Source Sans Pro', sans-serif;
 	h2 {
 		font-size: 20px;
 	}
+	img {
+		width: 50%;
+		height: 25%;
+	}
 }
 
