@@ -90,3 +90,19 @@ font-family: 'Source Sans Pro', sans-serif;
 	border-radius: 2em;
 }
 
+@media only screen and (max-width: 1030px) {
+	.adding, .gemPics, .instructions, .scoreBoard {
+	float: none;
+	width: 95%;
+	margin: auto;
+	height: 300px;
+	
+	}
+}
+@media only screen and (max-width: 600px){
+	.header{
+		font-size: 15px;
+	}
+	.numberToMatch, .score {
+	font-size: 30px;
+}
