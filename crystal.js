@@ -19,58 +19,33 @@ $(document).ready(function(){
 	}
 };
 
+gemFunc();
+$('.numberToMatch').html(crystalValue);
+ 
+
+$(".gemPics").on("click", "img", function(event){
+	event.preventDefault();
 	gemFunc();
-	$('.numberToMatch').html(crystalValue);
+	var gem1value = (gemArray[0]);
+	adder = adder + gem1value;
+	$('.score').html(adder);
+	checkit();
 
-
-	$('.pic1').on("click", function(){
-	//take the value and push it to total score
-	// gemFunc();
-		var gem1value = (gemArray[0]);
-		adder = adder + gem1value;
-		$('.score').html(adder);
-		checkit();
-	});
-	$('.pic2').on("click", function(){
-	//take the value and push it to total score
-	// gemFunc();
-		var gem2value = (gemArray[1]);
-		adder = adder + gem2value;
-		$('.score').html(adder);
-		checkit();
-	});
-	$('.pic3').on("click", function(){
-	//take the value and push it to total score
-
-		var gem3value = (gemArray[2]);
-		adder = adder + gem3value;
-		$('.score').html(adder);
-		checkit();
-	});
-	$('.pic4').on("click", function(){
-	//take the value and push it to total score
-
-		var gem4value = (gemArray[3]);
-		adder = adder + gem4value;
-		$('.score').html(adder);
-		checkit();
-	});
+})
 
 function checkit(){
-if (crystalValue === adder) {
-	$("#winlossmessage").html("You won that round!");
-	win = win + 1;
-	$("#wins").html(win);
-	//reset
-	reset();
-	}
-else if (crystalValue < adder) {
-	$("#winlossmessage").html("You loss that round!");
-	loss = loss + 1;
-	$("#losses").html(loss);
-	//reset
-	reset();
-}
+	if (crystalValue === adder) {
+		$("#winlossmessage").html("You won that round!");
+		win = win + 1;
+		$("#wins").html(win);
+		reset();
+		}
+	else if (crystalValue < adder) {
+		$("#winlossmessage").html("You loss that round!");
+		loss = loss + 1;
+		$("#losses").html(loss);
+		reset();
+		}
 };
 function reset(){
 	gemArray.length = 0;
